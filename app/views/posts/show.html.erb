@@ -1,0 +1,12 @@
+<div class="col-sm-6">
+<h1>Title: <%= @post.title %></h1>
+<p>Body: <%= @post.body %></p>
+<hr>
+<%= link_to "Edit Post", edit_post_path(@post), :class => "btn btn-secondary" %>
+<%= link_to "Delete Post", post_path(@post), method: :delete, data: {confirm: "Are you sure?"}, :class => "btn btn-danger" %>
+  <hr>
+
+<hr>
+  <%= render 'comments/comments' %>
+  <%= render 'comments/form' %>
+</div>
